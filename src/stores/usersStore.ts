@@ -28,5 +28,19 @@ export const usersActions = {
         users: state.users
       };
     });
+  },
+  usersRead: () => {
+    usersStore.setState((state) => {
+      state.users.push({
+        name: '홍길동',
+        age: 20
+      }, {
+        name: '춘향이',
+        age: 16
+      });
+      return {
+        users: state.users
+      };
+    });
   }
 };
